@@ -1,2 +1,5 @@
 # randiantech.github.io
-rt webpage
+Randiantech Website
+
+# About
+Developed by Juan Carlos Cancela <cancela.juancarlos@gmail.com>
