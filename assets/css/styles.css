@@ -32,9 +32,9 @@ color: #fff;
 Background-Color:#000;
 }
 
-h1 {
+h2 {
     color : #FFF;
-    font-size: 80px;
+    font-size: 65px;
 }
 
 .main-title {
@@ -377,7 +377,6 @@ background-position: center;
 -moz-background-size: cover;
 -webkit-background-size: cover;
 padding: 150px 0 10px;
-/*background-image: url('../img/girl-big.jpg');*/
 border-top: 1px solid #fff;
 border-right: 1px solid #fff;
 border-left: 1px solid #fff;
