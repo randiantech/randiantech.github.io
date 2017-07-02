@@ -35,7 +35,7 @@ Background-Color:#000;
 h2 {
     color : #FFF;
     font-size: 70px;
-    background-color: rgba(220, 0, 0, 0.5);
+    background-color: rgba(146, 220, 0, 0.5);
 }
 
 .main-title {
@@ -66,7 +66,7 @@ text-transform: uppercase;
 
 .header hr {
 width: 50px;
-border-top: 2px solid rgb(228, 79, 79);
+border-top: 2px solid rgba(220, 0, 142, 0.5)
 }
 
 
@@ -88,23 +88,23 @@ margin: 5px;
 .btn-custom-one {
 background-color: transparent;
 color: #fff;
-border: 2px solid rgb(228, 79, 79);
+border: 2px solid rgba(146, 220, 0, 0.5);
 }
 
 .btn-custom-one:hover {
-background-color: rgb(228, 79, 79);
+background-color: rgba(146, 220, 0, 0.5);
 text-decoration: none;
 color: #fff;
 }
 
 .btn-custom-two {
 color: #fff;
-background-color: rgb(228, 79, 79);
-border: 2px solid rgb(228, 79, 79);
+background-color: rgba(146, 220, 0, 0.5);
+border: 2px solid rgba(146, 220, 0, 0.5);
 }
 
 .btn-custom-two:hover {
-border: 2px solid rgb(228, 79, 79);
+border: 2px solid rgba(146, 220, 0, 0.5);
 text-decoration: none;
 color: #fff;
 background-color: transparent;
@@ -121,7 +121,7 @@ border-color: transparent;
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 background-color: transparent;
-border-bottom: 1px solid rgb(228, 79, 79);
+border-bottom: 1px solid rgba(146, 220, 0, 0.5);
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -143,10 +143,10 @@ font-family: 'Oswald', sans-serif;
 border-color: transparent;
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-background-color: rgb(228, 79, 79);
+background-color: rgba(146, 220, 0, 0.5);
 }
 .navbar-inverse .navbar-toggle {
-border-color: rgb(228, 79, 79);
+border-color: rgba(146, 220, 0, 0.5);
 }
 
 
@@ -177,7 +177,7 @@ font-family: 'Oswald', sans-serif;
 }
 
 #carousel-slider p {
-color: rgb(228, 79, 79);
+color: rgba(146, 220, 0, 0.5);
 font-size: 16px;
 line-height: 25px;
 margin: 25px 20px;
@@ -193,7 +193,7 @@ border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 margin-bottom: 40px;
-background-color: rgba(255, 0, 0, 0.20);
+background-color: rgba(146, 220, 0, 0.5);
 -webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
@@ -201,7 +201,7 @@ transition: all 0.5s ease-in-out;
 }
 
 #services .services-wrapper:hover {
-background-color: rgba(255, 0, 0, 0.80);
+background-color: rgba(146, 220, 0, 0.5);
 }
 
 #services h3 {
@@ -210,7 +210,6 @@ font-family: 'Oswald', sans-serif;
 
 #services .services-wrapper i {
 margin: 5px;
-color: rgb(228, 79, 79);
 font-size: 60px;
 }
 
@@ -275,7 +274,7 @@ padding: 30px 20px;
 font-weight: 900;
 text-transform: uppercase;
 font-size: 30px;
-color: rgb(228, 79, 79);
+color: rgba(146, 220, 0, 0.5);
 }
 
 .light-pricing .pricing-footer {
@@ -322,18 +321,18 @@ border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 margin-bottom: 40px;
-background-color: rgba(255, 0, 0, 0.20);
+background-color: rgba(146, 220, 0, 0.5);
 cursor: pointer;
 -webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;
-border: 1px solid rgb(228, 79, 79);
+border: 1px solid rgba(146, 220, 0, 0.5);
 }
 
 #work .work-wrapper:hover {
-background-color: rgba(255, 0, 0, 0.80);
-border: 1px solid rgb(228, 79, 79);
+background-color: rgba(146, 220, 0, 0.5);
+border: 1px solid rgba(146, 220, 0, 0.5);
 
 opacity: .80; /* standard: ff gt 1.5, opera, safari */
 -ms-filter: "alpha(opacity=80)"; /* ie 8 */
@@ -384,7 +383,7 @@ border-radius: 10px 10px 0px 0px;
 }
 
 .team-wrapper > .team-inner > a {
-color: rgb(228, 79, 79);
+color: rgba(146, 220, 0, 0.5);
 width: 80px;
 height: 80px;
 border-radius: 50%;
@@ -392,7 +391,7 @@ border-radius: 50%;
 -webkit-border-radius: 50%;
 margin: 0 auto -50px;
 display: block;
-color: rgb(228, 79, 79);
+color: rgba(146, 220, 0, 0.5);
 z-index: 999;
 font-size: 40px;
 padding: 15px 22px;
@@ -406,7 +405,7 @@ transition: all 0.8s ease-in-out;
 .team-wrapper > .team-inner > a:hover {
 color: #fff;
 text-decoration: none;
-background-color: rgb(228, 79, 79);
+background-color: rgba(146, 220, 0, 0.5);
 }
 
 
@@ -419,7 +418,7 @@ border-left: 1px solid #fff;
 }
 
 .team-wrapper .description h5 {
-color: rgb(228, 79, 79);
+color: rgba(146, 220, 0, 0.5);
 }
 
 
@@ -429,7 +428,7 @@ CONTACT SECTION STYLES
 ==============================*/
 
 #contact .contact-wrapper {
-background-color: rgba(255, 0, 0, 0.20);
+background-color: rgba(146, 220, 0, 0.5);
 padding: 20px;
 border-radius: 5px;
 -moz-border-radius: 5px;
