@@ -1,406 +1,1087 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+<!doctype html>
+<html lang="zxx">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<![endif]-->
-    <title>RANDIANTECH</title>
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="assets/css/ionicons.css" rel="stylesheet" />
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <link href="assets/js/source/jquery.fancybox.css" rel="stylesheet" />
-    <link href="assets/css/animations.min.css" rel="stylesheet" />
-    <link href="assets/css/styles.css" rel="stylesheet" />
-    <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Material Design Startup Landing Template">
+    <meta name="author" content="BigHero">
+    <title>Randiantech</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/material-kit.css" rel="stylesheet" />
+    <link href="css/owl.carousel.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.png">
+    <!-- Colors -->
+    <!-- <link rel="stylesheet" href="css/colors/green.css"> -->
+    <!-- Skin switcher -->
+    <!-- Manually link your desire skin -->
+    <style type="text/css">
+        .skins {
+            position: fixed;
+            top: 190px;
+            left: -120px;
+            transition: .3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .skins:hover {
+            left: 0;
+        }
+
+        .skin-colors {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+            background-color: #fff;
+            width: 120px;
+            border: 1px solid #e7e7e7;
+        }
+
+        .skin-colors li {
+            position: relative;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            margin: -3px;
+            line-height: 0;
+            transition: .3s ease-in-out;
+        }
+
+        .skin-colors li:hover {
+            opacity: .7;
+        }
+
+        .skin-colors li.active::before {
+            content: "\f00c";
+            font-family: FontAwesome;
+            font-size: 20px;
+            width: 32px;
+            line-height: 32px;
+            text-align: center;
+            position: absolute;
+            color: #fff;
+        }
+
+        .skin-toggler {
+            position: absolute;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            right: -49px;
+            top: 0;
+            background-color: #fff;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+            color: #888;
+            border: 1px solid #e7e7e7;
+            border-left: 0;
+        }
+
+        .skin-toggler .fa {
+            transform: rotate(30deg);
+            -webkit-transition: 2s;
+            -moz-transition: 2s;
+            -ms-transition: 2s;
+            -o-transition: 2s;
+            transition: 2s;
+            animation: gear 1s infinite;
+        }
+
+        @keyframes gear {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
 </head>
 
-<body data-spy="scroll" data-target="#menu-section">
-    <!--MENU SECTION START-->
-    <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="http://www.randiantech.com">RANDIANTECH</a>
+<body id="up">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Page hero -->
+    <div class="" id="headers">
+        <!--  Header -->
+        <div class="header">
+            <nav id="sticky-nav" class="navbar navbar-custom sticky navbar-center">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="" href="#up">
+                            <img src="img/logo.png" alt="logo" class="img-responsive navbar-brand">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navigation-example">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#services">Services</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#price">Price</a>
+                            </li> -->
+                            <li>
+                                <a href="#team">Team</a>
+                            </li>
+                            <li>
+                                <a href="#clients">Clients</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#blog">Blog</a>
+                            </li> -->
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="home" class="page-hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 home-text">
+                            <h1 class="title">Welcome to
+                                <strong>RandianTech</strong>
+                            </h1>
+                            <p class="up-type-title"> We are experts in
+                                <span class="animated-text" id="animated-text"></span>
+                            </p>
+                            <p class="p-details">
+                                Get access to a talented, multidisciplinary team of experienced software engineers, specialized in developing New Products,
+                                QA and Staff Augmentation.
+                            </p>
+                            <div class="header-app-icons">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/randiantech/" class="btn">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#link" class="btn">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#link" class="btn">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#link" class="btn">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <a href="#btn" class="btn btn-info btn-md">
+                                <i class="fa fa-paper-plane-o"></i> Start Now
+                            </a>
+                            <a href="#btn" class="btn btn-success btn-md">
+                                <i class="fa fa-bolt"></i> Sign up
+                            </a> -->
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <img src="img/header-img.png" alt="header image" class="header-img img-responsive">
+                        </div>
+                    </div>
+                    <div id="particles-js"></div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#home">HOME</a>
+        </div>
+        <!-- End Header -->
+    </div>
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-heading text-center wow fadeInUp">
+                <h2 class="title">About Randiantech</h2>
+                <h5 class="description">Incorporated by recognized IT professionals, Randiantech has rapidly become a well-known partner to accomplish world-class and startups
+                    mission critical projects.</h5>
+            </div>
+            <!-- first row -->
+            <div class="row">
+                <div class="col-md-4 wow fadeInUp">
+                    <div class="info info-horizontal">
+                        <div class="icon icon-success">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">Met the Team </h4>
+                            <p>
+                                Get connected with highly skilled, experienced developers that leverages the newest in technology to amplify your organization's
+                                potential.
+                            </p>
+                            <a href="#up">More...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInUp">
+                    <div class="info info-horizontal">
+                        <div class="icon icon-danger">
+                            <i class="fa fa-heartbeat"></i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">All Things Web!</h4>
+                            <p>
+                                With Javascript as our strongest, essential area of expertise, we have extensive experience on web, storage, mobile, testing
+                                and infrastructure.
+                            </p>
+                            <a href="#up">More...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInUp">
+                    <div class="info info-horizontal">
+                        <div class="icon icon-info">
+                            <i class="fa fa-columns"></i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">Agile Development</h4>
+                            <p>
+                                We provide high quality training and coaching to companies -from startups to corporations- to help them find and adopt agile
+                                methodology to their own company needs.
+                            </p>
+                            <a href="#up">More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <img src="img/about-img.png" alt="" class="img-responsive">
+            </div>
+            <!-- End first row -->
+        </div>
+    </section>
+    <!-- End about -->
+    <!-- services -->
+    <section class="section services bg-gray" id="services">
+        <div class="container">
+            <div class="section-heading text-center wow fadeInUp">
+                <h2 class="title text-center"><br></h2>
+                <ul class="nav nav-pills nav-pills-primary">
+                    <li class="active">
+                        <a href="#web-design" data-toggle="tab">Web Design</a>
                     </li>
                     <li>
-                        <a href="#services">PRODUCTS & SERVICES</a>
+                        <a href="#web-development" data-toggle="tab">Web Development</a>
                     </li>
                     <li>
-                        <a href="#work">CLIENTS</a>
-                    </li>
-                    <li>
-                        <a href="#team">TEAM</a>
-                    </li>
-                    <li>
-                        <a href="#contact">CONTACT</a>
+                        <a href="#api-development" data-toggle="tab">API Development</a>
                     </li>
                 </ul>
+                <br>
+            </div>
+            <div>
+                <div class="tab-content tab-space">
+                    <!-- tab web-design -->
+                    <div class="tab-pane active" id="web-design">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="img-container">
+                                    <img src="img/web-design.png" alt="Feature image" class="feature-img img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-desktop"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Responsive Design</h4>
+                                        <p>We craft solutions to seamlessly adopt and work as expected on as many devices as needed</p>
+                                    </div>
+                                </div>
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-diamond"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Multi-purpose</h4>
+                                        <p>We have succesfully delivered responsive designs for E-commerce platforms, Admin Dashboards, Analytics Consoles, Institutional Sites and more </p>
+                                    </div>
+                                </div>
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-trophy"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">High Quality</h4>
+                                        <p>Pixel perfect, detail obsessive approach to get the best possible user experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end tab mobile -->
+                    <!-- tab web-development -->
+                    <div class="tab-pane" id="web-development">
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="img-container">
+                                    <img src="img/web-dev.png" alt="Feature image" class="feature-img img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-code"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Quality Engineering</h4>
+                                        <p>Quality does matter. All our solutions excels as solid, maintainable and future-proof implementations in order to provide predictive and successful results.</p>
+                                    </div>
+                                </div>
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-gears"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Software that Scales</h4>
+                                        <p>Get ready to scale software. We have extensive experience working with cloud platforms to leverage your product right there in time.</p>
+                                    </div>
+                                </div>
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-laptop"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Modern Stack</h4>
+                                        <p>React, React Native, VueJS, Angular 5, Less, SaSS, Webpack, NodeJS. The right technologies to get a modern, adaptable and maintanable web.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end tab tablet -->
+                    <!-- tab api-development -->
+                    <div class="tab-pane" id="api-development">
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="img-container">
+                                    <img src="img/mac-app.png" alt="Feature image" class="feature-img img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-desktop"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">RESTful & Microservices</h4>
+                                        <p>Looking for a more flexible, scalable and predictable architecture? Moving away from a monolithic architure? Met the team that has succesfully modernize platforms from startups to world-class companies.</p>
+                                    </div>
+                                </div>
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-heart-o"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Software that Scales</h4>
+                                        <p>Get ready-to-scale software. We have extensive experience working with cloud platforms to leverage your product right there in time.</p>
+                                    </div>
+                                </div>
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-code"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Automation at is heart</h4>
+                                        <p>We provide fully automated solutions for all our client APIs. REST easy, go prod without hassle.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end tab desktop -->
+                </div>
             </div>
         </div>
-    </div>
-    <!--MENU SECTION END-->
-    <!--HOME SECTION START-->
-    <div id="home">
+        <!-- End container -->
+    </section>
+    <!-- End services -->
+    <!-- Price table -->
+    <!-- <div class="section price-table" id="price">
         <div class="container">
+            <div class="section-header text-center">
+                <h2 class="title">Select Your Perfect Plan</h2>
+                <h5 class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat nobis.</h5>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card card-pricing">
+                        <div class="content">
+                            <div class="header header-primary text-center">
+                                <h3 class="widget-header-title">Basic</h3>
+                            </div>
+                            <h1 class="card-title"><small>$</small>29<small>/mo</small></h1>
+                            <ul>
+                                <li><b>1</b> User</li>
+                                <li><b>5</b> Members</li>
+                                <li><b>55</b> Private Message</li>
+                                <li><i class="fa fa-times"> </i> Customer Support</li>
+                            </ul>
+                            <button class="btn btn-primary">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-pricing ">
+                        <div class="content content-primary">
+                            <div class="header header-success text-center">
+                                <h3 class="widget-header-title">Pro</h3>
+                            </div>
+                            <h1 class="card-title"><small>$</small>99<small>/mo</small></h1>
+                            <ul>
+                                <li><b>100</b> Users</li>
+                                <li><b>50</b> Members</li>
+                                <li><b>125</b> Private Message</li>
+                                <li><i class="fa fa-check-square-o"> </i> Customer Support</li>
+                            </ul>
+                            <button class="btn btn-white">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-pricing">
+                        <div class="content">
+                            <div class="header header-danger text-center">
+                                <h3 class="widget-header-title">Ultimate</h3>
+                            </div>
+                            <h1 class="card-title"><small>$</small>299<small>/mo</small></h1>
+                            <ul>
+                                <li><b>1000</b> Users</li>
+                                <li><b>100</b> Members</li>
+                                <li><b>550</b> Private Message</li>
+                                <li><i class="fa fa-check-square-o"> </i> Customer Support</li>
+                            </ul>
+                            <button class="btn btn-primary">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- End price table -->
+    <!-- Team -->
+    <section class="section bg-gray" id="team">
+        <div class="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center wow fadeInUp">
+                        <h2 class="title">Randiantech Team</h2>
+                        <h5 class="description">Delivering instantly loved software</h5>
+                        <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card card-profile card-plain">
+                            <div class="card-avatar">
+                                <a href="#link">
+                                    <img class="img" src="img/team/ceo.jpeg" alt="team" />
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h4 class="card-title">Juan Carlos Cancela</h4>
+                                <h6 class="category text-muted">CEO / Co-Founder</h6>
+                                <p class="card-description">
+                                    Motivated, action-oriented technology enthusiast with experience on multiple industries providing cutting edge technology
+                                    solutions.
+                                </p>
+                                <div class="footer">
+                                    <a href="https://www.facebook.com/randiantech/" class="btn btn-just-icon btn-facebook btn-round">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-twitter btn-round">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-linkedin btn-round">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-dribbble btn-round">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-profile card-plain">
+                            <div class="card-avatar">
+                                <a href="#link">
+                                    <img class="img" src="img/team/cto.png" alt="team" />
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h4 class="card-title">Lucas Campana</h4>
+                                <h6 class="category text-muted">CTO</h6>
+                                <p class="card-description">
+                                    Software Architect with 15+ years of experience, working on critical IT positions on some of the most important companies
+                                    in LATAM
+                                </p>
+                                <div class="footer">
+                                    <a href="https://www.facebook.com/randiantech/" class="btn btn-just-icon btn-facebook btn-round">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-twitter btn-round">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-linkedin btn-round">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-dribbble btn-round">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-profile card-plain">
+                            <div class="card-avatar">
+                                <a href="#link">
+                                    <img class="img" src="img/team/3.jpg" alt="team" />
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h4 class="card-title">Guillermo Mulvihill</h4>
+                                <h6 class="category text-muted">Sales Account Manager</h6>
+                                <p class="card-description">
+                                    Experienced sales account manager with vast experience on LATAM and US markets. Worked as Project Manager for top notch technology companies.
+                                </p>
+                                <div class="footer">
+                                    <a href="https://www.facebook.com/randiantech/" class="btn btn-just-icon btn-facebook btn-round">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-twitter btn-round">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-linkedin btn-round">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a href="#link" class="btn btn-just-icon btn-dribbble btn-round">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End team -->
+    <!-- Clients -->
+    <section id="clients" class="section clients">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="title" style="color:black">Clients</h2>
+            </div>
+            <div class="clients-logo" id="clients-logo">
+                <div class="slider" id="slider">
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo5.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo5.png" alt="">
+                        </a>
+                    </div>
+                    <div class="clients-content">
+                        <a href="#">
+                            <img src="img/support/logo1.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
-                    <h2>WE CRAFT
-                        <div class="main-title">
-                            <b>INSTANTLY LOVED</b>
-                        </div> SOFTWARE</h2>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <p class="main-descr">
-                        Get access to a talented, multidisciplinary team of experienced software developers, specialized in developing New Products,
-                        QA and Staff Augmentation
+                <div class="col-md-5 clients-text">
+                    <h2 style="color:black">Outstanding minds build great software.</h2>
+                    <p style="color:black; font-size: 40px; font-weight: bold; padding-top: 50px;">
+                        WE HAVE THEM.
                     </p>
                 </div>
-            </div>
-            <div class="row animate-in" data-anim-type="fade-in-up">
-                <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2 scroll-me">
-                    <div class="social">
-                        <a href="https://www.facebook.com/randiantech/" class="btn button-custom btn-custom-one">
-                            <i class="fa fa-facebook "></i>
-                        </a>
-                        <a href="https://twitter.com/randiantech" class="btn button-custom btn-custom-one">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/randiantech" class="btn button-custom btn-custom-one">
-                            <i class="fa fa-linkedin "></i>
-                        </a>
-                        <a href="https://github.com/randiantech" class="btn button-custom btn-custom-one">
-                            <i class="fa fa-github "></i>
-                        </a>
-                    </div>
-                    <br/>
-                    <br/>
-                    <a href="#services" class=" btn button-custom btn-custom-two">
-                        <H3 style="margin-top: 15px;">CHECK OUR PRODUCTS AND SERVICES</H3>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--HOME SECTION END-->
-    <!--SERVICE SECTION START-->
-    <section id="services">
-        <div class="container">
-            <div class="row text-center header">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
-                    <h3>Products and Services</h3>
-                    <hr />
-                </div>
-            </div>
-            <div class="row animate-in" data-anim-type="fade-in-up">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
-                    <div class="services-wrapper">
-                        <center>
-                            <h3 style="margin-bottom: 15px;">SERVICES</h3>
-                        </center>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="services-wrapper">
-                        <center>
-                            <i class="ion-calendar"></i>
-                        </center>
-                        <center>
-                            <h3>Consultancy</h3> Randiantech technical team is prepared to work throughout the entire product
-                            development cycle. We have helped companies to successfully architect and define digital solutions
-                            to expand their business</center>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="services-wrapper">
-                        <center>
-                            <i class="ion-clipboard"></i>
-                        </center>
-                        <center>
-                            <h3>Software Development</h3> Our world class development team is vastly experienced both in enterprise
-                            and trending market technologies such as Java, NodeJS, PHP, C#, Rust, Go, Angular, React, Fuse,
-                            Oracle, and many others. </center>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="services-wrapper">
-                        <center>
-                            <i class="ion-clipboard"></i>
-                        </center>
-                        <center>
-                            <h3>Quality Assurance</h3> Quality Assurance is a first class citizen in Randiantech. We have successfully
-                            helped enterprise class companies as well as company startups in testing, delivering and monitoring
-                            software appropiately.</center>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
-                    <div class="services-wrapper">
-                        <center>
-                            <h3 style="margin-bottom: 15px;">PRODUCTS</h3>
-                        </center>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-6">
-                    <div class="services-wrapper">
-                        <center>
-                            <i class="ion-monitor"></i>
-                        </center>
-                        <center>
-                            <h3>Onyx Reports</h3> Onyx Reports is our cloud, subscription based platform to extract, process,
-                            generate and visualize key enterprise metrics from a wide variety of CRMs, such as Magento, Salesforce,
-                            Zoho, Pipedrive, Onyx CRM, among others.</center>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-6">
-                    <div class="services-wrapper">
-                        <center>
-                            <i class="ion-tshirt-outline"></i>
-                        </center>
-                        <center>
-                            <h3>Onyx Cardinal</h3> Onyx Cardinal is a fully customizable, cloud based geopositional system that
-                            provides real time tracking, positioning and monitoring.</center>
-                            <br />
+                <div class="col-md-6 col-md-offset-1">
+                    <div class="owl-carousel" id="owl-carousel">
+                        <!-- single review -->
+                        <div class="single-review text-center">
+                            <img src="img/team/ceo.jpeg" alt="" class="img-circle">
+                            <div class="review_content">
+                                <blockquote>TBD2</blockquote>
+                                <div class="review-author">TBD1</div>
+                            </div>
+                        </div>
+                        <!-- //single review -->
+                        <!-- single review -->
+                        <div class="single-review text-center">
+                            <img src="img/team/cto.png" alt="" class="img-circle">
+                            <div class="review_content">
+                                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequuntur, consequatur
+                                    ad nesciunt nulla voluptate voluptates.</blockquote>
+                                <div class="review-author">Lucas Campana, CTO</div>
+                            </div>
+                        </div>
+                        <!-- //single review -->
+                        <!-- single review -->
+                        <div class="single-review text-center">
+                            <img src="img/clients/3.png" alt="" class="img-circle">
+                            <div class="review_content">
+                                <blockquote>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore odit voluptates vero ea, sint! Eligendi?
+                                </blockquote>
+                                <div class="review-author">Alexa, SEO Expert</div>
+                            </div>
+                        </div>
+                        <!-- //single review -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--SERVICE SECTION END-->
-    <!--WORK SECTION START-->
-    <section id="work">
+    <!-- End clients -->
+    <!-- Blog news -->
+    <!-- <section class="blog" id="blog">
         <div class="container">
-            <div class="row text-center header animate-in" data-anim-type="fade-in-up">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h3>Clients</h3>
-                    <hr />
-                </div>
+            <div class="section-header text-center">
+                <h2 class="title">Latest Blog</h2>
+                <h5 class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h5>
             </div>
-            <div class="row text-center animate-in" data-anim-type="fade-in-up" id="work-div">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 html css">
-                    <div class="work-wrapper">
-                        <div style="height: 300px;">
-                            <a class="fancybox-media" title="TurismoCity" href="assets/img/clients/turismocity.jpg">
-                                <center>
-                                    <img src="assets/img/clients/turismocity.jpg" class="img-responsive img-rounded" alt="" style="width:400px;" />
-                                </center>
+            <div class="owl-carousel" id="blog-carousel">
+                <div class="item">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="blog-single.html">
+                                <img class="img img-raised img-responsive" src="img/blog/blog1.jpg" alt="img" />
                             </a>
                         </div>
-                        <h4>TurismoCity</h4>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 html css">
-                    <div class="work-wrapper">
-                        <div style="height: 300px;">
-                            <a class="fancybox-media" title="Global Meaning" href="assets/img/clients/logo-gm.png">
-                                <center>
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <img src="assets/img/clients/logo-gm.png" class="img-responsive img-rounded" alt="" style="width:400px;" />
-                                </center>
-                            </a>
-                        </div>
-                        <h4>Global Meaning</h4>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 html css">
-                    <div class="work-wrapper">
-                        <div style="height: 300px;">
-                            <a class="fancybox-media" title="SchooLinks" href="assets/img/clients/logo-sl.jpg">
-                                <center>
-                                    <img src="assets/img/clients/logo-sl.jpg" class="img-responsive img-rounded" alt="" style="width:400px;" />
-                                </center>
-                            </a>
-                        </div>
-                        <br />
-                        <h4>SchooLinks</h4>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 html css">
-                    <div class="work-wrapper">
-                        <div style="height: 300px;">
-                            <a class="fancybox-media" title="Raftr" href="assets/img/clients/logo-raftr.png">
-                                <center>
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <img src="assets/img/clients/logo-raftr.png" class="img-responsive img-rounded" alt="" style="width:400px;" />
-                                </center>
-                            </a>
-                        </div>
-                        <br />
-                        <h4>Raftr</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--WORK SECTION END-->
-    <!--TEAM SECTION START-->
-    <section id="team">
-        <div class="container">
-            <div class="row text-center header animate-in" data-anim-type="fade-in-up">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h3>Team Members </h3>
-                    <hr />
-                </div>
-            </div>
-            <div class="row animate-in" data-anim-type="fade-in-up">
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <div class="team-wrapper">
-                        <div class="team-inner" style="background-image: url('assets/img/team/1.jpg')">
-                            <a href="https://linkedin.com/in/juancarloscancela" target="_blank">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </div>
-                        <div class="description">
-                            <h3> Juan Carlos Cancela</h3>
-                            <h5 style="color: white;">
-                                <strong> CEO, Founder </strong>
-                            </h5>
-                            <p> Motivated, action-oriented technology enthusiast with experience on multiple industries providing
-                                cutting edge technology solutions. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <div class="team-wrapper">
-                        <div class="team-inner" style="background-image: url('assets/img/placeholder.png')">
-                            <a href="#" target="_blank">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </div>
-                        <div class="description">
-                            <h3> Lucas Campana</h3>
-                            <h5 style="color: white;">
-                                <strong> CTO </strong>
-                            </h5>
-                            <p>Software Architect with 15+ years of experience, working on critical IT positions on some of
-                                the most important companies in LATAM</p>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <div class="team-wrapper">
-                        <div class="team-inner" style="background-image: url('assets/img/placeholder.png')">
-                            <a href="#" target="_blank">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </div>
-                        <div class="description">
-                            <h3> Cintia Miko</h3>
-                            <h5 style="color: white;">
-                                <strong> UX Specialist </strong>
-                            </h5>
-                            <br />
-                            <br />
-                            <p>UI & UX specialist, with vast experience on responsive, mobile design and development
+                        <div class="content">
+                            <h6 class="category text-info">Technology</h6>
+                            <p>
+                                <i class="fa fa-clock-o"></i> 27 September 2016</p>
+                            <h4 class="card-title">
+                                <a href="blog-single.html">Apple's latest iPhones: USB-C ya later, for now</a>
+                            </h4>
+                            <p class="card-description">
+                                A few hours before the Apple event, I made a bet with a coworker: I think this new iPhone is going.
+                                <a href="blog-single.html"> Read More </a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <div class="team-wrapper">
-                        <div class="team-inner" style="background-image: url('assets/img/team/4.jpeg')">
-                            <a href="#" target="_blank">
-                                <i class="fa fa-twitter"></i>
+                <div class="item">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="blog-single.html">
+                                <img class="img img-raised img-responsive" src="img/blog/blog2.jpg" alt="img" />
                             </a>
                         </div>
-                        <div class="description">
-                            <h3> Guillermo Mulvihill</h3>
-                            <h5 style="color: white;">
-                                <strong> QA & Processes</strong>
-                            </h5>
-                            <br />
-                            <br />
-                            <p> 10+ years experience working with world class clients leading QA, QA and automation teams </p>
+                        <div class="content">
+                            <h6 class="category text-success">
+                                Startups
+                            </h6>
+                            <p>
+                                <i class="fa fa-clock-o"></i> 20 September 2016</p>
+                            <h4 class="card-title">
+                                <a href="blog-single.html">Facing your fears with Virtual Reality</a>
+                            </h4>
+                            <p class="card-description">
+                                Fear isn’t always such a bad thing. It is, after all, a self-preservation response programmed into our DNA that can be useful
+                                in keeping us out of harm’s way.
+                                <a href="blog-single.html">
+                                    Read More </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="blog-single.html">
+                                <img class="img img-raised img-responsive" src="img/blog/blog3.jpg" alt="img" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h6 class="category text-danger">
+                                Marketing
+                            </h6>
+                            <p>
+                                <i class="fa fa-clock-o"></i> 18 September 2016</p>
+                            <h4 class="card-title">
+                                <a href="blog-single.html">Teaching machines to predict the future</a>
+                            </h4>
+                            <p class="card-description">
+                                Our ability to anticipate actions is thanks to intuitions born out of a lifetime of experiences.
+                                <a href="blog-single.html"> Read More </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="blog-single.html">
+                                <img class="img img-raised img-responsive" src="img/blog/blog4.jpg" alt="img" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h6 class="category text-info">Technology</h6>
+                            <p>
+                                <i class="fa fa-clock-o"></i> 27 September 2016</p>
+                            <h4 class="card-title">
+                                <a href="blog-single.html">Feds will formally recall Samsung Galaxy Note 7</a>
+                            </h4>
+                            <p class="card-description">
+                                Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software
+                                company.
+                                <a href="blog-single.html"> Read More </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="blog-single.html">
+                                <img class="img img-raised img-responsive" src="img/blog/blog5.jpg" alt="img" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h6 class="category text-success">SEO</h6>
+                            <p>
+                                <i class="fa fa-clock-o"></i> 26 September 2016</p>
+                            <h4 class="card-title">
+                                <a href="blog-single.html">5 SEO secrets you’ll be surprised you didn’t know​</a>
+                            </h4>
+                            <p class="card-description">
+                                Getting your site to rank in Google can be a tough slog. It requires knowledge of current ranking factors, as well as the
+                                time and ability to optimize
+                                <a href="blog-single.html"> Read More </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="blog-single.html">
+                                <img class="img img-raised img-responsive" src="img/blog/blog6.jpg" alt="img" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h6 class="category text-danger">Typhography</h6>
+                            <p>
+                                <i class="fa fa-clock-o"></i>15 September 2016</p>
+                            <h4 class="card-title">
+                                <a href="blog-single.html">Styles come and go. Good design is a language, not a style.</a>
+                            </h4>
+                            <p class="card-description">
+                                Creativity is to discover a question that has never been asked. If one brings up an idiosyncratic question, the answer he
+                                gives will
+                                <a href="blog-single.html"> Read More </a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!--TEAM SECTION END-->
-    <!--CONTACT SECTION START-->
-    <section id="contact">
-        <div class="container">
-            <div class="row text-center header animate-in" data-anim-type="fade-in-up">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h3>Contact Details </h3>
-                    <hr />
-                </div>
-            </div>
-
-            <div class="row animate-in" data-anim-type="fade-in-up">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="contact-wrapper">
-                        <h3>We Are Social</h3>
-                        <p>
-                            Connect with us on Facebook, Twitter or just sharing some bits on Github
+    </section> -->
+    <!-- End Blog news -->
+    <!-- Contact -->
+    <section class="section section-image" id="contact">
+        <div class="contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="title">Get in Touch</h2>
+                        <p class="details">
+                            Randiantech office are located at the heart of Buenos Aires City.
                         </p>
-                        <div class="social-below">
-                            <a href="https://www.facebook.com/randiantech" class="btn button-custom btn-custom-two"> Facebook</a>
-                            <a href="https://twitter.com/randiantech" class="btn button-custom btn-custom-two"> Twitter</a>
-                            <a href="https://github.com/randiantech" class="btn button-custom btn-custom-two"> Github</a>
+                        <div class="row">
+                            <div class="col col-sm-6 col-sm-offset-0 col-xs-11 col-xs-offset-1 col-md-12">
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Find our office</h4>
+                                        <p>
+                                            Carlos Pellegrini 465
+                                            <br> CABA
+                                            <br> Argentina
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-sm-6 col-sm-offset-0 col-xs-11 col-xs-offset-1 col-md-12">
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-primary">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">Contact us</h4>
+                                        <p> Randiantech
+                                            <br> info@randiantech.com
+                                            <br> 15 5555 5555
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="contact-wrapper">
-                        <h3>Contact</h3>
-                        <h4>
-                            <strong>Email : </strong> info@randiantech.com </h4>
-                        <h4>
-                            <strong>Skype : </strong> randiantech </h4>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="contact-wrapper">
-                        <h3>Address : </h3>
-                        <h4>Carlos Pellegrini 465 (CABA)</h4>
-                        <h4>Argentina</h4>
-                        <div class="footer-div">
-                            &copy; 2018 Randiantech |
-                            <a href="http://www.randiantech.com/" target="_blank">by Randiantech</a>
+                    <div class="col-md-5 col-md-offset-2">
+                        <div class="card card-contact">
+                            <form id="contactForm" method="post" novalidate>
+                                <div class="header header-raised header-primary text-center">
+                                    <h4 class="card-title">Contact Us</h4>
+                                </div>
+                                <div class="card-layer"></div>
+                                <div class="content">
+                                    <div id="success"></div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">First name
+                                            <i class="help-block text-danger"></i>
+                                        </label>
+                                        <input type="text" name="name" id="name" class="form-control" required data-validation-required-message="Please enter your name.">
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Email address
+                                            <i class="help-block text-danger"></i>
+                                        </label>
+                                        <input type="email" name="email" id="email" class="form-control" required data-validation-required-message="Please enter your email address."
+                                        />
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Your message
+                                            <i class="help-block text-danger"></i>
+                                        </label>
+                                        <textarea name="message" class="form-control" rows="6" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes"> I'm not a robot
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="submit" class="btn btn-primary pull-right">Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--CONTACT SECTION END-->
-
-    <script src="assets/js/jquery-1.11.1.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/vegas/jquery.vegas.min.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/source/jquery.fancybox.js"></script>
-    <script src="assets/js/jquery.isotope.js"></script>
-    <script src="assets/js/appear.min.js"></script>
-    <script src="assets/js/animations.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <!-- End contact -->
+    <!-- Subscribe -->
+    <div class="subscribe bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="title">Subscribte to our news letter</h3>
+                </div>
+                <div class="col-md-6 text-right">
+                    <form method="post" id="subscribe">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <div class="form-group is-empty">
+                                        <input type="email" value="" placeholder="Your Email..." class="form-control">
+                                        <span class="material-input"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-info">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End subscribe -->
+    <!-- Footer -->
+    <footer class="footer section">
+        <div class="container footer-widget">
+            <div class="row">
+                <div class="col col-sm-3">
+                    <a href="#">
+                        <img src="img/logo.png" alt="Company logo" class="footer-logo img-responsive">
+                    </a>
+                    <div class="social">
+                        <a href="https://www.facebook.com/randiantech/">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#social">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#social">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a href="#social">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                        <a href="#social">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                    <!-- /Social -->
+                    <hr class="up-hr">
+                    <a class="btn btn-primary light btn-sm" href="#link">Company Brochure</a>
+                </div>
+                <div class="col col-sm-3">
+                    <h6 class="typo-light hd">Product</h6>
+                    <ul class="list-1">
+                        <li>
+                            <a href="#link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#link">Support</a>
+                        </li>
+                        <li>
+                            <a href="#link">Help</a>
+                        </li>
+                        <li>
+                            <a href="#link">Plan and Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-sm-3">
+                    <h6 class="typo-light hd">Company</h6>
+                    <ul class="list-1">
+                        <!-- <li>
+                            <a href="#link">Blog</a>
+                        </li> -->
+                        <li>
+                            <a href="#link">About us</a>
+                        </li>
+                        <li>
+                            <a href="#link">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="#link">Terms and Condition</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-sm-3">
+                    <div class="newsletter">
+                        <h6 class="typo-light">Newsletter</h6>
+                        <p>Sign up for the latest news &amp; offers.</p>
+                        <div id="subscribe-success"></div>
+                        <form class="form-widget subscribe-form" id="subscribe-form">
+                            <div class="field-group">
+                                <input type="email" class="form-control" placeholder="Enter Your Email">
+                                <button type="submit" id="submit" class="btn footer-btn btn-primary">
+                                    <i class="fa fa-envelope-o"></i>
+                                </button>
+                            </div>
+                            <div class="msg-wrp"></div>
+                        </form>
+                        <!-- /form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./Footer section -->
+    <!-- End footer -->
+    <!--   Core JS Files   -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/material.min.js"></script>
+    <!-- Jquery easing -->
+    <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+    <!-- Plugin For Google Maps -->
+    <!-- Typing text -->
+    <script src="js/typed.min.js" type="text/javascript"></script>
+    <!-- sticky -->
+    <script src="js/jquery.sticky.js" type="text/javascript"></script>
+    <!-- owl  carousel -->
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+    <!-- contact form -->
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <!-- <script src="js/modernizr.js" type="text/javascript"></script> -->
+    <!-- Partilce js -->
+    <script type="text/javascript" src="js/particles.js"></script>
+    <!-- main scripts -->
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
